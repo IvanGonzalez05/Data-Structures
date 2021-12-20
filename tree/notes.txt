@@ -1,0 +1,47 @@
+There are a lot of trees (binary trees, trie, heap...)
+
+-----------------------------------------------------
+Binary Tree: 
+
+A binary tree is a data structure formed by a set of nodes where each node can have 0, one or two nodes and each node can only have one parent.
+
+Binary trees can be perfect or full:
+
+In a Perfect Binary Tree each node has two or zero children and the bottom level is complete. In this type of tree, as the level goes down, the number of nodes duplicate. The number of the bottom level nodes is equal to the all the nodes above it + 1 is equal to the bottom. This means that half of our nodes are at the bottom level
+
+In a Full Binary Tree, some nodes have 1 child and the bottom level is not complete
+
+Binary Trees has Big O notation of O(log N):
+
+number of nodes on a tree = 2^h - 1 ;where h is the last level of the tree. h (height) starts from 1.
+
+LOG NODES = steps
+log 100 = 2 --> 10^2 = 100
+
+In general O(log N) means that we are halving the options to evaluate in each level.
+
+-----------------------------------------------------
+Binary Heap:
+
+Every child belongs to a parent node that has a greater value. This is called a Max Heap (the root value is the greatest value in the tree). A Min Heap is the opposite
+
+Big O: lookup O(n), insert O(log N), delete O(log N)
+
+-----------------------------------------------------
+Priority Queue:
+
+Is not the same data structure as a Queue (FIFO). A priority queue is a data structure in which each element has a priority
+
+Better than O(n)
+Priority
+Flexible Size
+Fast insert
+Slow lookup
+
+-----------------------------------------------------
+Trie:
+
+specialized tree focused on searching (usually text)
+In most cases, outperform BST, Hash Tables...
+
+Usually has an empty root node. Can have multiple children (more than 2)
