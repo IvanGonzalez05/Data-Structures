@@ -9,7 +9,7 @@ Binary trees can be perfect or full:
 
 In a Perfect Binary Tree each node has two or zero children and the bottom level is complete. In this type of tree, as the level goes down, the number of nodes duplicate. The number of the bottom level nodes is equal to the all the nodes above it + 1 is equal to the bottom. This means that half of our nodes are at the bottom level
 
-In a Full Binary Tree, some nodes have 1 child and the bottom level is not complete
+In a Full Binary Tree, some nodes have no child or two children and the bottom level is not complete
 
 Binary Trees has Big O notation of O(log N):
 
