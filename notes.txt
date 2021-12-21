@@ -1,0 +1,5 @@
+Useful resource to check how fast a sort algorithm is:
+https://www.toptal.com/developers/sorting-algorithms
+
+Useful resource to check Big O of data structures and sorting algorithms
+https://www.bigocheatsheet.com/
