@@ -12,7 +12,7 @@ Merge Sort: If space is not a worry (it has a Big O O(n)), merge sort is good be
 
 Quick Sort: if we are able to select a good pivot, is better than merge sort because on average has a O(n log n) nad space of O(log n). But if a bad pivot is chosen, the time complexity is O(n^2)
 
-Heap Sort: Big O of (n log n) and space complexity of O(1). However, in most cases is a little bit slower than Quick Sort.
+Heap Sort: Big O of (n log n) and space complexity of O(1). However, in most cases is a little bit slower than Quick Sort. Useful resource: https://brilliant.org/wiki/heap-sort/
 
 These are called "Non-Comparison Sort" because we dont compare each element, which is more efficient. But only works on INTEGER numbers in a specific range:
 
