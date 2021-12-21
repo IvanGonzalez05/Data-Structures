@@ -1,0 +1,32 @@
+Which sort method is the best?
+
+These are called "Comparison Sort" because we compare one element to the others in order to know where to position each element:
+
+Insertion Sort: should be used with only a few items. If input is small or is almost sorted.
+
+Bubble Sort: never haha. Its just used for educational purposes.
+
+Selection Sort: never again. Its Big O is horrible.
+
+Merge Sort: If space is not a worry (it has a Big O O(n)), merge sort is good because its worst time complexity is O(n log n)
+
+Quick Sort: if we are able to select a good pivot, is better than merge sort because on average has a O(n log n) nad space of O(log n). But if a bad pivot is chosen, the time complexity is O(n^2)
+
+Heap Sort: Big O of (n log n) and space complexity of O(1). However, in most cases is a little bit slower than Quick Sort.
+
+These are called "Non-Comparison Sort" because we dont compare each element, which is more efficient. But only works on INTEGER numbers in a specific range:
+
+Counting Sort and Radix Sort: 
+https://opendatastructures.org/ods-cpp/11_2_Counting_Sort_Radix_So.html
+
+Radix Big O => in time: O(nk) and in space: O(n + k)
+https://brilliant.org/wiki/radix-sort/
+
+https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
+
+Counting Big O => time: O(n + k). in space: O(k)
+https://brilliant.org/wiki/counting-sort/
+
+https://www.cs.usfca.edu/~galles/visualization/CountingSort.html
+
+Both have really good time complexity, but need some space
