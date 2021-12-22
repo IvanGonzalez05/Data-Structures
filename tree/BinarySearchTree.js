@@ -151,6 +151,73 @@ class BinarySearchTree {
       }
     }
   }
+
+  breadthFirstSearch() {
+    let currentNode = this.root;
+    let list = []; // answers
+    let queue = [];
+    queue.push(currentNode);
+
+    while (queue.length > 0) {
+      currentNode = queue.shift();
+      list.push(currentNode.value);
+
+      if (currentNode.left) queue.push(currentNode.left);
+
+      if (currentNode.right) queue.push(currentNode.right);
+    }
+
+    return list;
+  }
+
+  // breadthFirstSearchR: recursive BFS implementation
+  breadthFirstSearchR(queue, list) {
+    if (!queue.length) return list;
+
+    let currentNode = queue.shift();
+    list.push(currentNode.value);
+
+    if (currentNode.left) queue.push(currentNode.left);
+
+    if (currentNode.right) queue.push(currentNode.right);
+
+    return this.breadthFirstSearchR(queue, list);
+  }
+
+  depthFirstSearchInOrder = () => this.traverseInOrder(this.root, []);
+
+  depthFirstSearchPostOrder = () => this.traversePostOrder(this.root, []);
+
+  depthFirstSearchPreOrder = () => this.traversePreOrder(this.root, []);
+
+  traverseInOrder(node, list) {
+    if (node.left) this.traverseInOrder(node.left, list);
+    list.push(node.value);
+
+    if (node.right) this.traverseInOrder(node.right, list);
+
+    return list;
+  }
+
+  traversePreOrder(node, list) {
+    list.push(node.value);
+
+    if (node.left) this.traversePreOrder(node.left, list);
+
+    if (node.right) this.traversePreOrder(node.right, list);
+
+    return list;
+  }
+
+  traversePostOrder(node, list) {
+    if (node.left) this.traversePostOrder(node.left, list);
+
+    if (node.right) this.traversePostOrder(node.right, list);
+
+    list.push(node.value);
+
+    return list;
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -161,8 +228,18 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-console.log(tree.lookup(9));
+// console.log(tree.lookup(9));
 // console.log(JSON.stringify(traverse(tree.root)));
+
+// prints a list with the elements in the order they are visited (left to right)
+// console.log(tree.breadthFirstSearch());
+// console.log(tree.breadthFirstSearchR([tree.root], []));
+
+// prints a list with the elements after performing
+// the 3 differents DFS
+console.log(tree.depthFirstSearchInOrder());
+console.log(tree.depthFirstSearchPreOrder());
+console.log(tree.depthFirstSearchPostOrder());
 
 function traverse(node) {
   const tree = { value: node.value };
